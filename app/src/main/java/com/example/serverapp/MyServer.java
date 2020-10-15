@@ -60,32 +60,6 @@ public class MyServer extends NanoHTTPD {
             String organization = parms.get("O");
             String locality = parms.get("L");
             String country = parms.get("C");
-/*
-            CSR csr = new CSR(keyManager.getPublicKey(), keyManager
-                    .getPrivateKey());
-            try {
-                PKCS10CertificationRequest cert = csr.generateByteCertificate(
-                        commonName,
-                        organizationalUnit,
-                        organization,
-                        locality,
-                        country);
-                PemObject pemObject = new PemObject("CERTIFICATE REQUEST",
-                        cert.getEncoded());
-                StringWriter str = new StringWriter();
-                PEMWriter pemWriter = new PEMWriter(str);
-                pemWriter.writeObject(pemObject);
-                pemWriter.close();
-                str.close();
-
-                return newFixedLengthResponse(str.toString());
-            } catch (Exception e) {
-                Log.e("cert generation error", e.toString());
-                return newFixedLengthResponse(
-                        "certificate generation error occurred:"
-                                + e.getMessage());
-            }
-        }*/
 
         }
         String msg = "<html><body><h1>Hello server</h1>\n";
